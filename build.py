@@ -11,6 +11,8 @@ html=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Quantum Mechanics: The Theoretical Minimum, animated</title>
 <meta name="description" content="Animated, narrated deep dive through all ten lectures of Susskind and Friedman's Quantum Mechanics: The Theoretical Minimum, with interactive math. By Brijesh Shetty (github.com/brijs).">
+<meta name="explainer:topic" content="Science">
+<meta name="explainer:tags" content="quantum mechanics, Susskind, physics, qubits, spin, entanglement">
 <style>{P('head.css')}</style></head><body>
 {P('shell.html')}
 <script>const NARR={json.dumps(narr,ensure_ascii=False)};const AUDIO={json.dumps(audio)};</script>
@@ -18,6 +20,6 @@ html=f'''<!doctype html>
 {js}
 assemble();glossUI();boot();
 </script></body></html>'''
-out=sys.argv[1] if len(sys.argv)>1 else os.path.join(d,'quantum-mechanics-theoretical-minimum.html')
+out=sys.argv[1] if len(sys.argv)>1 else os.path.join(d,'index.html')
 open(out,'w',encoding='utf-8').write(html)
 print('wrote',out,round(len(html)/1e6,2),'MB; audio clips:',len(audio))

@@ -2,7 +2,7 @@
 
 An animated, narrated, interactive single-file HTML explainer of Susskind & Friedman's *Quantum Mechanics: The Theoretical Minimum*, guided by Professor Schrö (a cat). 51 scenes: foundations, ten lectures, check-yourself quizzes, and a glossary.
 
-Open `quantum-mechanics-theoretical-minimum.html` in a browser (no server needed). Narration is Kokoro TTS (voice `af_heart`) embedded as base64 MP3.
+Open `index.html` in a browser (no server needed). Narration is Kokoro TTS (voice `af_heart`) embedded as base64 MP3.
 
 ## Rebuild
 - `python3 tts.py` renders narration clips from `narration.json` into `audio/` (needs `kokoro-onnx`, model files, `ffmpeg`)

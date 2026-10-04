@@ -1,6 +1,6 @@
 import asyncio,os,json
 from playwright.async_api import async_playwright
-F='file://'+os.path.abspath('quantum-mechanics-theoretical-minimum.html')
+F='file://'+os.path.abspath('index.html')
 JS='''()=>{const o={};
  o.chsh=(()=>{const q=(a,b)=>Eq(SINGLET,ang(a),ang(b));return q(0,45)-q(0,135)+q(90,45)+q(90,135)})();
  o.E_same=Eq(SINGLET,0.3,0.3);o.E_ortho=Eq(SINGLET,0,Math.PI/2);o.E_60=Eq(SINGLET,0,Math.PI/3)+Math.cos(Math.PI/3);

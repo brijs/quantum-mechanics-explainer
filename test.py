@@ -1,6 +1,6 @@
 import asyncio,sys,json,os
 from playwright.async_api import async_playwright
-F='file://'+os.path.abspath('quantum-mechanics-theoretical-minimum.html')
+F='file://'+os.path.abspath('index.html')
 async def run(w,h,tag,shots):
     errs=[]
     async with async_playwright() as p:
