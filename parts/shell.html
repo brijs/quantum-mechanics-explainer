@@ -1,0 +1,62 @@
+<div id="app">
+  <div id="top">
+    <div id="brand">Ψ The Theoretical Minimum</div>
+    <div id="dots" role="tablist" aria-label="Scenes"></div>
+    <div id="rank" aria-live="polite"></div>
+  </div>
+  <div id="main">
+    <aside id="guide" aria-label="Guide: Professor Schrö the cat">
+      <div id="catwrap">
+        <svg id="cat" viewBox="0 0 200 200" role="img" aria-label="Professor Schrö, a cat in a bow tie">
+          <g id="catbob">
+            <rect x="8" y="150" width="46" height="40" rx="4" fill="#7a5a3a" stroke="#f3f1e6" stroke-width="2"/>
+            <text x="31" y="177" text-anchor="middle" font-size="22" fill="#f2d67a" font-family="Georgia,serif">Ψ</text>
+            <ellipse cx="108" cy="162" rx="46" ry="30" fill="#3d3d4a"/>
+            <polygon points="62,62 70,18 100,50" fill="#3d3d4a"/><polygon points="138,62 130,18 100,50" fill="#3d3d4a"/>
+            <polygon points="68,56 72,30 90,50" fill="#f29fb4"/><polygon points="132,56 128,30 110,50" fill="#f29fb4"/>
+            <ellipse cx="100" cy="88" rx="48" ry="42" fill="#4a4a5a"/>
+            <g id="eyeL"><ellipse cx="80" cy="82" rx="11" ry="12" fill="#f3f1e6"/><circle id="pL" cx="80" cy="84" r="6" fill="#111"/><rect id="lidL" x="68" y="68" width="24" height="0" fill="#4a4a5a"/><path id="hapL" d="M69 86 Q80 74 91 86" stroke="#111" stroke-width="3.5" fill="none" display="none" stroke-linecap="round"/></g>
+            <g id="eyeR"><ellipse cx="120" cy="82" rx="11" ry="12" fill="#f3f1e6"/><circle id="pR" cx="120" cy="84" r="6" fill="#111"/><rect id="lidR" x="108" y="68" width="24" height="0" fill="#4a4a5a"/><path id="hapR" d="M109 86 Q120 74 131 86" stroke="#111" stroke-width="3.5" fill="none" display="none" stroke-linecap="round"/></g>
+            <path id="browL" d="M68 66 L92 66" stroke="#f3f1e6" stroke-width="3" stroke-linecap="round"/><path id="browR" d="M108 66 L132 66" stroke="#f3f1e6" stroke-width="3" stroke-linecap="round"/>
+            <polygon points="95,98 105,98 100,105" fill="#f29fb4"/>
+            <ellipse id="mouth" cx="100" cy="112" rx="8" ry="1.5" fill="#2a1418"/>
+            <g stroke="#f3f1e6" stroke-width="1.6" opacity=".8"><line x1="52" y1="98" x2="78" y2="102"/><line x1="52" y1="108" x2="78" y2="107"/><line x1="148" y1="98" x2="122" y2="102"/><line x1="148" y1="108" x2="122" y2="107"/></g>
+            <path id="bow" d="M100 134 L82 124 L82 144 Z M100 134 L118 124 L118 144 Z" fill="#9be0a8" stroke="#f3f1e6" stroke-width="1.5"/>
+            <circle cx="100" cy="134" r="5" fill="#9be0a8" stroke="#f3f1e6" stroke-width="1.5"/>
+            <g id="badge"><circle cx="140" cy="150" r="13" fill="#f2d67a" stroke="#f3f1e6" stroke-width="1.5"/><text id="badgeT" x="140" y="156" text-anchor="middle" font-size="16" fill="#2a2a1a" font-family="Georgia,serif" font-weight="700">1</text></g>
+          </g>
+        </svg>
+      </div>
+      <div id="cap" aria-live="off"></div>
+      <div id="react" aria-live="polite"></div>
+      <div id="ctl">
+        <button class="btn sm" id="bReplay" aria-label="Replay narration">⟲ Replay</button>
+        <button class="btn sm" id="bStop" aria-label="Stop narration">■ Stop</button>
+        <button class="btn sm" id="bMute" aria-label="Mute narration">🔊</button>
+        <button class="btn sm" id="bAuto" aria-pressed="false" aria-label="Auto-advance after narration">Auto ▸</button>
+        <button class="btn sm" id="bGloss" aria-label="Open glossary">📖 Glossary</button>
+        <button class="btn sm on" id="bFx" aria-pressed="true" aria-label="Toggle chalkboard effects">Chalk fx</button>
+      </div>
+    </aside>
+    <section id="stage" aria-live="polite">
+      <h2 id="sceneTitle"></h2><div id="sceneSub"></div>
+      <div id="sceneBody"></div>
+      <div id="nav"><button class="btn" id="bBack">◂ Back</button><button class="btn pri" id="bNext">Next ▸</button></div>
+    </section>
+  </div>
+</div>
+<div id="pop" role="dialog" aria-live="polite" hidden></div>
+<div id="glossModal" hidden role="dialog" aria-label="Glossary"><div class="gbox"><div class="row" style="justify-content:space-between"><b class="chalk" style="color:var(--yel);font-size:1.3rem">Glossary</b><button class="btn sm" id="glClose">Close ✕</button></div><input id="glFind" type="text" placeholder="Filter terms…" aria-label="Filter glossary terms" style="width:100%;margin:8px 0;padding:8px;border-radius:8px;border:1.5px solid var(--line);background:#12251f;color:var(--chalk);font:inherit"><div id="glList"></div></div></div>
+<div id="toast" role="status"></div>
+<div id="intro">
+  <div class="box">
+    <div style="font-size:3rem" aria-hidden="true">Ψ ⟩</div>
+    <h1>Quantum Mechanics: The Theoretical Minimum</h1>
+    <p>An animated deep dive through Susskind &amp; Friedman's ten lectures, narrated by Professor Schrö. Interactive math in every scene.</p>
+    <div class="row">
+      <button class="btn pri" id="enterSound">🔊 Enter with sound</button>
+      <button class="btn" id="enterSilent">Enter silently (captions only)</button>
+    </div>
+    <p class="tip" style="margin-top:14px">By <a style="color:var(--blu)" href="https://github.com/brijs">Brijesh Shetty · github.com/brijs</a> · Based on the book, plus Brij's own notes</p>
+  </div>
+</div>
