@@ -13,7 +13,7 @@ html=f'''<!doctype html>
 <meta name="description" content="Animated, narrated deep dive through all ten lectures of Susskind and Friedman's Quantum Mechanics: The Theoretical Minimum, with interactive math. By Brijesh Shetty (github.com/brijs).">
 <meta name="explainer:topic" content="Science">
 <meta name="explainer:tags" content="quantum mechanics, Susskind, physics, qubits, spin, entanglement">
-<style>{P('head.css')}</style></head><body>
+<style>{P('head.css')}</style><script defer src="https://brijs.dev/t.js" data-site="quantum-mechanics-explainer"></script></head><body>
 {P('shell.html')}
 <script>const NARR={json.dumps(narr,ensure_ascii=False)};const AUDIO={json.dumps(audio)};</script>
 <script>
